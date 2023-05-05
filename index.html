@@ -22,21 +22,29 @@
           </span>
           <div class="logo">/gloaguen/kiliann</div>
           <ul>
-            <li>About me</li>
-            <li>Skills</li>
-            <li>Works</li>
-            <button>
-              Let's Talk
-              <img
-                src="arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
-                alt="arrow"
-              />
-            </button>
+            <a href="#about-me">
+              <li>About me</li>
+            </a>
+            <a href="#skills">
+              <li>Skills</li>
+            </a>
+            <a href="#works">
+              <li>Works</li>
+            </a>
+            <a href="#contact">
+              <button>
+                Let's Talk
+                <img
+                  src="./assets/arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
+                  alt="arrow"
+                />
+              </button>
+            </a>
           </ul>
         </nav>
       </header>
       <section class="header-menu">
-        <span class="open-modal"></span>
+        <div class="open-modal"></div>
         <div class="background-light"></div>
         <div class="name">
           <h1>
@@ -49,12 +57,12 @@
           French
           <span class="bold"
             >Web Developper
-            <div class="brush-anim-1" id="mobile-brush-anim-1"></div>
+            <div class="brush-anim-1"></div>
           </span>
           and Amazon
           <span class="bold2"
             >Influencer
-            <div class="brush-anim-2" id="mobile-brush-anim-2"></div>
+            <div class="brush-anim-2"></div>
           </span>
         </h2>
         <div class="icons">
@@ -79,7 +87,7 @@
         </div>
       </section>
       <section class="main-menu">
-        <h3 class="about">About</h3>
+        <h3 class="about" id="about-me">About</h3>
         <p>
           My name is <span class="bold3">Kiliann</span>, I am 22 years old and I
           am a <span class="bold3">web developer</span> and Amazon
@@ -112,45 +120,30 @@
           my social networks.
         </p>
         <div class="routes"></div>
-        <h3 class="skills">Skills</h3>
+        <h3 class="skills" id="skills">Skills</h3>
         <h4>Web Développement</h4>
         <div class="skills-web-dev"></div>
         <h4>Growth Marketing</h4>
         <div class="skills-growth"></div>
         <h4>UI / UX / Editing</h4>
         <div class="skills-editing"></div>
-        <h3 class="works">Works</h3>
+        <h3 class="works" id="works">Works</h3>
         <div class="cards">
-          <!-- <div class="card">
-            <div class="charlize-card">
-              <h5>Charlize</h5>
-            </div>
-            <div class="information-card">
-              <h6>Context</h6>
-              <p>
-                Charlize is a SaaS that compares the price of Amazon products
-                across Europe, the user finds his product at the best price.
-              </p>
-              <h6>Tech stack</h6>
-              <div class="stack">
-                <div class="logos"></div>
-                <img
-                src="arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
-                alt=""
-                />
-              </div>
-            </div>
-        </div> -->
           <div class="card">
             <div class="argentbank-card">
               <span class="card-blur"></span>
             </div>
             <div class="information-card">
               <div class="redirect-button">
-                <img
-                  src="arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
-                  alt="redirect-button"
-                />
+                <a
+                  href="https://github.com/Charlesgln/Argent-Bank-Redux"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
+                    alt="redirect-button"
+                  />
+                </a>
               </div>
               <div class="context-card">
                 <h6>ArgentBank</h6>
@@ -169,10 +162,15 @@
           <div class="card" id="column-reverse-mobile">
             <div class="information-card">
               <div class="redirect-button">
-                <img
-                  src="arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
-                  alt="redirect-button"
-                />
+                <a
+                  href="https://github.com/Charlesgln/P8_First_React"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
+                    alt="redirect-button"
+                  />
+                </a>
               </div>
               <div class="context-card">
                 <h6>Kaza</h6>
@@ -197,10 +195,15 @@
             </div>
             <div class="information-card">
               <div class="redirect-button">
-                <img
-                  src="arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
-                  alt="redirect-button"
-                />
+                <a
+                  href="https://github.com/Charlesgln/Project_Sophie_Bluel"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
+                    alt="redirect-button"
+                  />
+                </a>
               </div>
               <div class="context-card">
                 <h6>Sophie Bluel</h6>
@@ -219,10 +222,15 @@
           <div class="card" id="column-reverse-mobile">
             <div class="information-card">
               <div class="redirect-button">
-                <img
-                  src="arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
-                  alt="redirect-button"
-                />
+                <a
+                  href="https://github.com/Charlesgln/Project_Ohmyfood_"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
+                    alt="redirect-button"
+                  />
+                </a>
               </div>
               <div class="context-card">
                 <h6>OhMyFood</h6>
@@ -240,34 +248,9 @@
               <span class="card-blur"></span>
             </div>
           </div>
-
-          <div class="card">
-            <div class="booki-card">
-              <span class="card-blur"></span>
-            </div>
-            <div class="information-card">
-              <div class="redirect-button">
-                <img
-                  src="arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
-                  alt="redirect-button"
-                />
-              </div>
-              <div class="context-card">
-                <h6>Booki</h6>
-                <p>
-                  Booki is a travel agency that takes you to a new world,
-                  optimised for all devices.
-                </p>
-              </div>
-              <div class="stack-card">
-                <h6>Tech stack</h6>
-                <div class="logos5"></div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
-      <div class="header-contact">
+      <div class="header-contact" id="contact">
         <h3>Work together</h3>
         <p>
           Want to discuss your next web project?
@@ -299,7 +282,7 @@
 
           <button id="submit-button">
             Envoyer
-            <img src="arrow-black.png" alt="Flèche Noir" />
+            <img src="./assets/arrow-black.png" alt="Flèche Noir" />
           </button>
         </form>
       </div>
@@ -308,22 +291,24 @@
         <div class="footer-info">
           <div class="social-media">
             <a href="https://www.instagram.com/kilianngln/" target="_blank">
-              <img src="instagram-logo.png" alt="Logo Instagram" />
+              <img src="./assets/instagram-logo.png" alt="Logo Instagram" />
             </a>
             <a
               href="https://www.linkedin.com/in/kiliann-gloaguen-261955265/"
               target="_blank"
             >
-              <img src="linkedin-logo.png" alt="Logo Linkedin" />
+              <img src="./assets/linkedin-logo.png" alt="Logo Linkedin" />
             </a>
             <a href="https://github.com/Charlesgln" target="_blank">
-              <img src="github-logo.png" alt="Logo Github" />
+              <img src="./assets/github-logo.png" alt="Logo Github" />
             </a>
             <a href="mailto:gcorpfr@gmail.com" target="_blank">
-              <img src="mail-logo.png" alt="Logo Mail" />
+              <img src="./assets/mail-logo.png" alt="Logo Mail" />
             </a>
           </div>
-          <div class="github">Github</div>
+          <a href="https://github.com/Charlesgln" target="_blank">
+            <div class="github">Github</div>
+          </a>
         </div>
       </section>
     </div>
