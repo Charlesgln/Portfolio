@@ -400,6 +400,17 @@ button {
   position: absolute;
 }
 
+.background-light {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: radial-gradient(
+    38.04% 38.04% at 50% 50%,
+    rgba(0, 0, 0, 0.52) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
 h1 {
   position: relative;
   display: inline-block;
@@ -589,46 +600,73 @@ h2 {
   font-weight: 500;
 }
 
-.brush-anim-1 {
-  position: absolute;
-  bottom: -7px;
-  left: 20px;
-  background-image: url("./assets/Vector.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 0px;
-  height: 9px;
-  transition: ease-in-out all 0.2s;
-}
-
-.bold:hover::after {
-  width: 168px;
-}
-
 .bold2 {
   position: relative;
   font-weight: 500;
 }
 
-.brush-anim-2 {
+.brush {
   position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  transition: ease-in-out all 0.3s;
+}
+
+#anim-1 {
+  bottom: -7px;
+  left: 20px;
+  background-image: url("./assets/Vector.png");
+  width: 0px;
+  height: 9px;
+}
+
+#anim-2 {
   bottom: -3px;
   left: 2px;
   background-image: url("./assets/Vector2.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
   width: 0px;
   height: 7px;
-  transition: ease-in-out all 0.2s;
 }
 
-.bold2:hover:after {
-  width: 129px;
+#anim-3 {
+  bottom: -3px;
+  left: 13px;
+  background-image: url("./assets/Vector2.png");
+  width: 0px;
+  height: 5px;
+  margin-left: 10px;
 }
 
-.bold3 {
+#anim-4 {
+  bottom: -3px;
+  left: 13px;
+  background-image: url("./assets/Vector2.png");
+  width: 0px;
+  height: 5px;
+  margin-left: 7px;
+}
+
+#anim-5 {
+  bottom: -3px;
+  left: 13px;
+  background-image: url("./assets/Vector2.png");
+  width: 0px;
+  height: 5px;
+  margin-left: 7px;
+}
+
+#anim-6 {
+  bottom: -18px;
+  left: 12px;
+  background-image: url("./assets/Vector2.png");
+  width: 0px;
+  height: 9px;
+  margin-left: 60px;
+}
+
+.bold {
   font-weight: 500;
 }
 
@@ -636,48 +674,48 @@ h2 {
   position: absolute;
   width: 45.9px;
   height: 45.9px;
-  z-index: -2;
+  z-index: -3;
+  opacity: 0;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  transition: all 0.3s ease-out;
 }
 
 #icon-terminal {
-  top: 39%;
-  left: 30%;
+  top: 49%;
+  left: 40%;
   background-image: url("./assets/terminal.png");
 }
 
 #icon-object {
-  top: 33%;
-  left: 25%;
+  top: 40%;
+  left: 36%;
 
   background-image: url("./assets/object.png");
 }
 
 #icon-bracket {
-  top: 25%;
-  left: 29%;
-
+  top: 36%;
+  left: 39%;
   background-image: url("./assets/bracket.png");
 }
 
 #icon-social {
-  top: 27%;
-  left: 69%;
+  top: 40%;
+  left: 60%;
   background-image: url("./assets/share.png");
 }
 
 #icon-folder {
-  top: 33%;
-  left: 75%;
-
+  top: 42%;
+  left: 55%;
   background-image: url("./assets/folder.png");
 }
 
 #icon-camera {
-  top: 40%;
-  left: 69%;
+  top: 46%;
+  left: 60%;
   background-image: url("./assets/camera.png");
 }
 .main-menu {
@@ -686,6 +724,7 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
+
 h3 {
   display: inline-block;
   position: relative;
@@ -698,15 +737,17 @@ h3 {
   letter-spacing: -0.035em;
 }
 
-h3:after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 13px;
-  background-image: url("./assets/Vector2.png");
-  width: 0px;
-  height: 5px;
-  transition: ease-in-out all 0.2s;
+#about-me {
+  margin-bottom: 50px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: ease-in-out all 0.6s;
 }
 
 h3:hover:after {
@@ -734,6 +775,8 @@ p {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0;
+  transition: ease-in-out all 0.6s;
 }
 
 h4 {
@@ -751,6 +794,8 @@ h4 {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  opacity: 0;
+  transition: ease-in-out all 0.6s;
 }
 
 .skills-growth {
@@ -760,7 +805,9 @@ h4 {
   height: 165px;
   background-repeat: no-repeat;
   background-size: contain;
+  opacity: 0;
   background-position: center;
+  transition: ease-in-out all 0.6s;
 }
 
 .skills-editing {
@@ -770,14 +817,16 @@ h4 {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  opacity: 0;
+  transition: ease-in-out all 0.6s;
 }
 
-.skills {
+#skills {
   padding-left: 10px;
   margin: 200px 0px 50px 0px;
 }
 
-.works {
+#works {
   margin: 250px 0px 100px 0px;
 }
 
@@ -961,6 +1010,20 @@ h4 {
   background-repeat: no-repeat;
 }
 
+.project-1,
+.project-3 {
+  transition: ease-in-out all 0.5s;
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.project-2,
+.project-4 {
+  transition: ease-in-out all 0.5s;
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
 .header-contact {
   display: flex;
   justify-content: center;
@@ -968,15 +1031,14 @@ h4 {
   flex-direction: column;
 }
 
-.header-contact h3 {
+#work-together {
   margin: 200px 0px 20px;
 }
 
-.header-contact h3::after {
-  content: "";
-  width: 0px;
+#contact-p {
+  transition: ease-in-out all 0.6s;
+  opacity: 0;
 }
-
 .message-contact {
   display: flex;
   flex-direction: column;
@@ -1019,15 +1081,17 @@ h4 {
   margin: 15px 0px 7px 0px;
 }
 
-form {
+#contact-form {
   position: relative;
   width: 50%;
   margin-top: 50px;
   font-family: "Manrope";
   box-sizing: border-box;
+  opacity: 0;
+  transition: ease-in-out all 0.6s;
 }
 
-form input {
+#contact-form input {
   box-sizing: border-box;
   padding: 10px;
   border-radius: 5px;
@@ -1064,12 +1128,14 @@ form input {
   margin-top: 2px;
 }
 
-.footer {
+#footer {
   margin-top: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  opacity: 0;
+  transition: ease-in-out all 0.6s;
 }
 
 .footer-info {
@@ -1098,8 +1164,7 @@ form input {
 
 @media (max-width: 1000px) {
   .wrapper {
-    position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   body {
@@ -1180,7 +1245,7 @@ form input {
     flex-direction: column-reverse;
   }
 
-  .works {
+  #works {
     margin: 250px 0px 50px 0px;
   }
 
@@ -1188,7 +1253,7 @@ form input {
     font-size: 18px;
   }
 
-  .skills {
+  #skills {
     margin: 200px 0px 100px 0px;
   }
 
@@ -1203,11 +1268,11 @@ form input {
   .skills-editing {
     width: 109%;
   }
-  .header-contact h3 {
+  #work-together {
     margin: 70px 30px 20px;
   }
 
-  form {
+  #contact-form {
     width: 75%;
   }
 }
@@ -1318,13 +1383,13 @@ form input {
     text-align: center;
   }
 
-  .about {
+  #about-me {
     margin-top: 300px;
     margin-bottom: 50px;
     font-size: 38px;
   }
 
-  .skills {
+  #skills {
     padding: 0;
     font-size: 38px;
   }
@@ -1352,7 +1417,7 @@ form input {
     display: none;
   }
 
-  .works {
+  #works {
     margin-top: 180px;
     font-size: 38px;
   }
@@ -1452,7 +1517,7 @@ form input {
     display: none;
   }
 
-  .footer {
+  #footer {
     margin-top: 124px;
     margin-bottom: 124px;
   }

@@ -15,6 +15,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="background-light"></div>
       <header>
         <nav>
           <span class="mobile-navbar-background">
@@ -45,7 +46,6 @@
       </header>
       <section class="header-menu">
         <div class="open-modal"></div>
-        <div class="background-light"></div>
         <div class="name">
           <h1>
             kiliann
@@ -57,12 +57,12 @@
           French
           <span class="bold"
             >Web Developper
-            <div class="brush-anim-1"></div>
+            <div class="brush" id="anim-1"></div>
           </span>
           and Amazon
           <span class="bold2"
             >Influencer
-            <div class="brush-anim-2"></div>
+            <div class="brush" id="anim-2"></div>
           </span>
         </h2>
         <div class="icons">
@@ -87,49 +87,60 @@
         </div>
       </section>
       <section class="main-menu">
-        <h3 class="about" id="about-me">About</h3>
-        <p>
-          My name is <span class="bold3">Kiliann</span>, I am 22 years old and I
-          am a <span class="bold3">web developer</span> and Amazon
-          <span class="bold3">influencer</span>.
-        </p>
-        <p>
-          <span class="bold3">Passionate about tech</span> since I was 10 years
-          old, I like to develop new skills in order to imagine and design my
-          <span class="bold3">ideas</span> the way I want in order to
-          <span class="bold3">achieve my goals</span>.
-        </p>
-        <p>
-          I started coding as a <span class="bold3">self-taught</span> person
-          out of curiosity, then I ended up taking an
-          <span class="bold3">online training</span> to improve my coding
-          skills.
-        </p>
-        <p>
-          Today, I build <span class="bold3">websites</span> and
-          <span class="bold3">SaaS</span> for my online business and am
-          constantly looking to <span class="bold3">improve my coding</span>.
-        </p>
-        <p>
-          As for my social media, I started in September 2022 by presenting
-          vidéos of everyday products to help
-          <span class="bold3">my community</span>! Today, I have
-          <span class="bold3">generated</span> more than
-          <span class="bold3">70 000 €</span> for my collaborators and I have
-          accumulated more than <span class="bold3">10 million views</span> on
-          my social networks.
-        </p>
+        <h3 id="about-me">
+          About
+          <div class="brush" id="anim-3"></div>
+        </h3>
+        <div class="about-text">
+          <p>
+            My name is <span class="bold">Kiliann</span>, I am 22 years old and
+            I am a <span class="bold">web developer</span> and Amazon
+            <span class="bold">influencer</span>.
+          </p>
+          <p>
+            <span class="bold">Passionate about tech</span> since I was 10 years
+            old, I like to develop new skills in order to imagine and design my
+            <span class="bold">ideas</span> the way I want in order to
+            <span class="bold">achieve my goals</span>.
+          </p>
+          <p>
+            I started coding as a <span class="bold">self-taught</span> person
+            out of curiosity, then I ended up taking an
+            <span class="bold">online training</span> to improve my coding
+            skills.
+          </p>
+          <p>
+            Today, I build <span class="bold">websites</span> and
+            <span class="bold">SaaS</span> for my online business and am
+            constantly looking to <span class="bold">improve my coding</span>.
+          </p>
+          <p>
+            As for my social media, I started in September 2022 by presenting
+            vidéos of everyday products to help
+            <span class="bold">my community</span>! Today, I have
+            <span class="bold">generated</span> more than
+            <span class="bold">70 000 €</span> for my collaborators and I have
+            accumulated more than <span class="bold">10 million views</span> on
+            my social networks.
+          </p>
+        </div>
         <div class="routes"></div>
-        <h3 class="skills" id="skills">Skills</h3>
+        <h3 id="skills">
+          Skills
+          <div class="brush" id="anim-4"></div>
+        </h3>
         <h4>Web Développement</h4>
         <div class="skills-web-dev"></div>
         <h4>Growth Marketing</h4>
         <div class="skills-growth"></div>
         <h4>UI / UX / Editing</h4>
         <div class="skills-editing"></div>
-        <h3 class="works" id="works">Works</h3>
+        <h3 id="works">
+          Works
+          <div class="brush" id="anim-5"></div>
+        </h3>
         <div class="cards">
-          <div class="card">
+          <div class="card project-4">
             <div class="argentbank-card">
               <span class="card-blur"></span>
             </div>
@@ -159,7 +170,7 @@
               </div>
             </div>
           </div>
-          <div class="card" id="column-reverse-mobile">
+          <div class="card project-3" id="column-reverse-mobile">
             <div class="information-card">
               <div class="redirect-button">
                 <a
@@ -189,7 +200,7 @@
               <span class="card-blur"></span>
             </div>
           </div>
-          <div class="card">
+          <div class="card project-2">
             <div class="sophie-card">
               <span class="card-blur"></span>
             </div>
@@ -219,7 +230,7 @@
               </div>
             </div>
           </div>
-          <div class="card" id="column-reverse-mobile">
+          <div class="card project-1" id="column-reverse-mobile">
             <div class="information-card">
               <div class="redirect-button">
                 <a
@@ -251,14 +262,17 @@
         </div>
       </section>
       <div class="header-contact" id="contact">
-        <h3>Work together</h3>
-        <p>
+        <h3 id="work-together">
+          Work together
+          <div class="brush" id="anim-6"></div>
+        </h3>
+        <p id="contact-p">
           Want to discuss your next web project?
           <br style="margin-bottom: 20px" />I'm always happy to talk to new
           clients. Please feel free to contact me via the form below. I will get
           back to you as soon as possible to discuss your web development needs.
         </p>
-        <form>
+        <form id="contact-form">
           <div class="info-contact">
             <div class="first-name-input">
               <label for="firstName">First Name *</label>
@@ -286,7 +300,7 @@
           </button>
         </form>
       </div>
-      <section class="footer">
+      <section id="footer">
         <p>Designed & Built by K.Gloaguen</p>
         <div class="footer-info">
           <div class="social-media">
