@@ -1,4 +1,5 @@
 const animationName = document.querySelector(".anim-name");
+const navbar = document.querySelector("nav");
 const brushAnim1 = document.getElementById("anim-1");
 const brushAnim2 = document.getElementById("anim-2");
 const brushAnim3 = document.getElementById("anim-3");
@@ -33,31 +34,72 @@ const footer = document.getElementById("footer");
 // ---------------- ANIMATION ON LOAD ---------------
 
 window.addEventListener("load", () => {
-  iconTerminal.style.transform = "translate(-200px, -60px)";
-  iconCamera.style.transform = "translate(200px, -60px)";
-  icon.forEach((icon) => {
-    icon.style.opacity = "1";
-  });
+  //   setTimeout(() => {
+  //     iconTerminal.style.transform = "translate(-200px, -60px)";
+  //     iconCamera.style.transform = "translate(200px, -60px)";
+  //     icon.forEach((icon) => {
+  //       icon.style.opacity = "1";
+  //     });
+  //   }, 5400);
+
+  //   setTimeout(() => {
+  //     navbar.style.opacity = "1";
+  //   }, 6000);
+
+  //   setTimeout(() => {
+  //     iconFolder.style.transform = "translate(160px, -160px)";
+  //     iconBracket.style.transform = "translate(-120px, -160px)";
+  //   }, 5410);
+
+  //   setTimeout(() => {
+  //     iconObject.style.transform = "translate(-170px, -100px)";
+  //     iconSocial.style.transform = "translate(220px, -120px)";
+  //   }, 5420);
+
+  //   setTimeout(() => {
+  //     animationName.style.height = "183px";
+  //   }, 4500);
+  //   setTimeout(() => {
+  //     brushAnim1.style.width = "168px";
+  //   }, 4800);
+
+  //   setTimeout(() => {
+  //     brushAnim2.style.width = "130px";
+  //   }, 4900);
+  // });
+
+  setTimeout(() => {
+    iconTerminal.style.transform = "translate(-200px, -60px)";
+    iconCamera.style.transform = "translate(200px, -60px)";
+    icon.forEach((icon) => {
+      icon.style.opacity = "1";
+    });
+  }, 400);
+
+  setTimeout(() => {
+    navbar.style.opacity = "1";
+  }, 600);
 
   setTimeout(() => {
     iconFolder.style.transform = "translate(160px, -160px)";
     iconBracket.style.transform = "translate(-120px, -160px)";
-  }, 10);
+  }, 410);
 
   setTimeout(() => {
     iconObject.style.transform = "translate(-170px, -100px)";
     iconSocial.style.transform = "translate(220px, -120px)";
-  }, 20);
+  }, 420);
+
   setTimeout(() => {
     animationName.style.height = "183px";
-  }, 200);
+  }, 500);
   setTimeout(() => {
     brushAnim1.style.width = "168px";
-  }, 500);
+  }, 400);
 
   setTimeout(() => {
     brushAnim2.style.width = "130px";
-  }, 700);
+  }, 900);
 });
 
 // ------------------- MODAL ON MOBILE -------------------
@@ -189,6 +231,94 @@ window.addEventListener("scroll", function () {
   }
 });
 
-window.addEventListener("scroll", function () {
-  console.log(window.scrollY);
+document.addEventListener("mousemove", function (event) {
+  let mouseX = event.clientX;
+  let mouseY = event.clientY;
+
+  let zoneWidth = document.documentElement.clientWidth;
+  let zoneHeight = document.documentElement.clientHeight;
+
+  let mouseXPercent = Math.floor((mouseX / zoneWidth) * 90);
+  let mouseYPercent = Math.floor((mouseY / zoneHeight) * 90);
+
+  let mouseXmultiplicatorR;
+  let mouseYmultiplicatorR;
+  let mouseXmultiplicatorL;
+  let mouseYmultiplicatorL;
+
+  if (
+    !(
+      mouseXPercent >= 40 &&
+      mouseXPercent <= 60 &&
+      mouseYPercent >= 40 &&
+      mouseYPercent <= 60
+    )
+  ) {
+    console.log("NON");
+    mouseXmultiplicatorR = (mouseXPercent - 50) / 100 + 1;
+    console.log(mouseXmultiplicatorR);
+    mouseYmultiplicatorR = (mouseYPercent - 50) / 100 - 1;
+    mouseXmultiplicatorL = (mouseXPercent - 50) / 100 - 1;
+    mouseYmultiplicatorL = (mouseYPercent - 50) / 100 - 1;
+  } else {
+    console.log("OUI");
+    mouseXmultiplicatorR = (mouseXPercent - 50) / 100 + 1;
+    mouseYmultiplicatorR = (mouseYPercent - 50) / 100 - 1;
+    mouseXmultiplicatorL = (mouseXPercent - 50) / 100 - 1;
+    mouseYmultiplicatorL = (mouseYPercent - 50) / 100 - 1;
+  }
+
+  // -------- RIGHT-ICON ------------
+
+  iconFolder.style.transform = `translate(${160 * mouseXmultiplicatorR}px, ${
+    -160 * -mouseYmultiplicatorR
+  }px)`;
+  iconSocial.style.transform = `translate(${220 * mouseXmultiplicatorR}px, ${
+    -120 * -mouseYmultiplicatorR
+  }px)`;
+  iconCamera.style.transform = `translate(${200 * mouseXmultiplicatorR}px, ${
+    -60 * -mouseYmultiplicatorR
+  }px)`;
+
+  // -----------LEFT-ICON -----------------
+
+  iconBracket.style.transform = `translate(${-120 * -mouseXmultiplicatorL}px, ${
+    -160 * -mouseYmultiplicatorL
+  }px)`;
+  iconObject.style.transform = `translate(${-170 * -mouseXmultiplicatorL}px, ${
+    -100 * -mouseYmultiplicatorL
+  }px)`;
+  iconTerminal.style.transform = `translate(${
+    -200 * -mouseXmultiplicatorL
+  }px, ${-60 * -mouseYmultiplicatorL}px)`;
+
+  // iconBracket.style.transform = "translate(-120px, -160px)";
+  // iconBracket.style.transform = "translate(-120px, -160px)";
+
+  // iconObject.style.transform = `translate(${-200 * mouseXmultiplicatorR}px, ${
+  //   -60 * -mouseYmultiplicatorR
+  // }px)`;
+  // }
+
+  // console.log(mouseXPercent);
+  // console.log(mouseYPercent);
+  // console.log("La position de la souris est : " + mouseX + ", " + mouseY);
 });
+
+// iconTerminal.style.transform = "translate(-200px, -60px)";
+//     iconCamera.style.transform = "translate(200px, -60px)";
+//     icon.forEach((icon) => {
+//       icon.style.opacity = "1";
+//     });
+//   }, 5400);
+
+//   setTimeout(() => {
+//     navbar.style.opacity = "1";
+//   }, 6000);
+
+//   setTimeout(() => {
+//     iconFolder.style.transform = "translate(160px, -160px)";
+//   }, 5410);
+
+//   setTimeout(() => {
+//     iconSocial.style.transform = "translate(220px, -120px)";
