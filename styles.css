@@ -635,32 +635,32 @@ h2 {
 }
 
 #anim-1 {
-  bottom: -7px;
-  left: 20px;
+  bottom: -8px;
+  left: 7px;
   background-image: url("./assets/Vector.png");
   width: 0px;
   height: 9px;
 }
 
 #anim-2 {
-  bottom: -3px;
-  left: 2px;
+  bottom: -8px;
+  left: 8px;
   background-image: url("./assets/Vector2.png");
   width: 0px;
   height: 7px;
 }
 
 #anim-3 {
-  bottom: -3px;
+  bottom: -15px;
   left: 13px;
   background-image: url("./assets/Vector2.png");
   width: 0px;
   height: 5px;
-  margin-left: 10px;
+  margin-left: 38px;
 }
 
 #anim-4 {
-  bottom: -3px;
+  bottom: -7px;
   left: 13px;
   background-image: url("./assets/Vector2.png");
   width: 0px;
@@ -669,8 +669,8 @@ h2 {
 }
 
 #anim-5 {
-  bottom: -3px;
-  left: 13px;
+  bottom: -15px;
+  left: 24px;
   background-image: url("./assets/Vector2.png");
   width: 0px;
   height: 5px;
@@ -797,20 +797,6 @@ p {
   padding: 0px 100px 0px 100px;
 }
 
-.routes {
-  display: flex;
-  flex-direction: column;
-  width: 93%;
-  height: 330px;
-  margin-top: 17%;
-  background-image: url("./assets/Routes.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: ease-in-out all 0.6s;
-}
-
 h4 {
   font-family: "Manrope";
   font-style: normal;
@@ -819,6 +805,43 @@ h4 {
   margin: 0px;
 }
 
+.social-cards {
+  display: flex;
+  gap: 110px;
+  width: 92%;
+  height: 430px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 100px;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.social-card {
+  font-family: "Manrope";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.social-name {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.social-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.followers {
+  font-weight: 700;
+}
+.logo-social {
+  width: 101px;
+}
 .skills-web-dev {
   width: 100%;
   height: 165px;
@@ -877,19 +900,6 @@ h4 {
   justify-content: space-between;
   gap: 80px;
   position: relative;
-}
-
-.card-blur {
-  position: absolute;
-  z-index: 1;
-  display: block;
-  width: 310px;
-  height: 260px;
-  top: 40px;
-  left: 51px;
-  background: white;
-  filter: blur(100px);
-  opacity: 0.15;
 }
 
 .redirect-button img {
@@ -957,6 +967,15 @@ h4 {
   margin: 0;
 }
 
+.charlize-card {
+  position: relative;
+  background-image: url("./assets/charlize-card.png");
+  width: 538px;
+  height: 259px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .argentbank-card {
   position: relative;
   background-image: url("./assets/argentbank.png");
@@ -1044,7 +1063,8 @@ h4 {
 }
 
 .project-1,
-.project-3 {
+.project-3,
+.project-5 {
   transition: ease-in-out all 0.5s;
   transform: translateX(100px);
   opacity: 0;
@@ -1058,6 +1078,7 @@ h4 {
 }
 
 .header-contact {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1162,7 +1183,7 @@ h4 {
 }
 
 #footer {
-  margin-top: 250px;
+  margin-top: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1176,7 +1197,7 @@ h4 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0px 80px 0px;
+  margin: 20px 0px 50px 0px;
   gap: 100px;
   width: 90%;
   font-family: "Manrope";
@@ -1195,8 +1216,42 @@ h4 {
   width: 25px;
 }
 
+.email {
+  position: relative;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.email > a {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Manrope";
+  font-size: 35px;
+  font-weight: 700;
+  padding-top: 265px;
+}
+
+.click_here {
+  background: url(/assets/click_here.png);
+  width: 80px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  bottom: -226px;
+  right: 176px;
+}
+
 @media (max-width: 1000px) {
   .wrapper {
+    position: relative;
+    overflow-x: hidden;
+  }
+  .wrapper {
+    position: relative;
+
     overflow: hidden;
   }
 
@@ -1206,12 +1261,7 @@ h4 {
   nav {
     margin: 20px 40px 0px 40px;
   }
-  .routes {
-    display: none;
-  }
-  .card-blur {
-    display: none;
-  }
+
   #l3 {
     top: 38%;
     right: -128%;
@@ -1255,11 +1305,19 @@ h4 {
     justify-content: center;
     align-items: center;
   }
-
+  .social-cards {
+    flex-direction: column;
+    height: 670px;
+    gap: 41px;
+  }
   .context-card p {
     text-align: center;
+    width: 250px;
   }
-
+  .charlize-card {
+    width: 300px;
+    height: 197px;
+  }
   .stack-card {
     display: flex;
     flex-direction: column;
@@ -1432,17 +1490,17 @@ h4 {
   }
 
   .skills-web-dev {
-    width: 100%;
+    width: 130%;
     height: 100px;
   }
 
   .skills-growth {
-    width: 100%;
+    width: 130%;
     height: 100px;
   }
 
   .skills-editing {
-    width: 100%;
+    width: 130%;
     height: 100px;
   }
 
@@ -1555,10 +1613,18 @@ h4 {
   }
 
   #footer {
-    margin-top: 124px;
+    margin-top: 470px;
     margin-bottom: 124px;
   }
 
+  .email > a {
+    font-size: 25px;
+    padding-top: 376px;
+  }
+
+  .click_here {
+    display: none;
+  }
   .info-contact {
     display: flex;
     gap: 30px;

@@ -11,6 +11,7 @@ const openModal = document.querySelector(".open-modal");
 const closeModal = document.querySelector(".close-modal");
 const links = document.querySelectorAll("li");
 const body = document.querySelector("body");
+const socialCards = document.querySelector(".social-cards");
 const icon = document.querySelectorAll(".icon");
 const iconTerminal = document.getElementById("icon-terminal");
 const iconObject = document.getElementById("icon-object");
@@ -19,7 +20,6 @@ const iconFolder = document.getElementById("icon-folder");
 const iconSocial = document.getElementById("icon-social");
 const iconCamera = document.getElementById("icon-camera");
 const aboutText = document.querySelector(".about-text");
-const routesImg = document.querySelector(".routes");
 const skillsWebDev = document.querySelector(".skills-web-dev");
 const skillsGrowth = document.querySelector(".skills-growth");
 const skillsEditing = document.querySelector(".skills-editing");
@@ -27,8 +27,9 @@ const project1 = document.querySelector(".project-1");
 const project2 = document.querySelector(".project-2");
 const project3 = document.querySelector(".project-3");
 const project4 = document.querySelector(".project-4");
+const project5 = document.querySelector(".project-5");
 const contactP = document.getElementById("contact-p");
-const contactForm = document.getElementById("contact-form");
+const emailRedirect = document.querySelector(".email");
 const footer = document.getElementById("footer");
 
 // ---------------- ANIMATION ON LOAD ---------------
@@ -60,12 +61,12 @@ window.addEventListener("load", () => {
     animationName.style.height = "183px";
   }, 500);
   setTimeout(() => {
-    brushAnim1.style.width = "168px";
+    brushAnim1.style.width = "100px";
   }, 400);
 
   setTimeout(() => {
     brushAnim2.style.width = "130px";
-  }, 900);
+  }, 400);
 });
 
 // -------------------ANIMATION ON SCROLL ------------------
@@ -81,7 +82,7 @@ if (document.documentElement.clientWidth > 750) {
     }
 
     if (window.scrollY >= 1016) {
-      routesImg.style.opacity = "1";
+      socialCards.style.opacity = "1";
     }
 
     if (window.scrollY >= 1632) {
@@ -103,40 +104,44 @@ if (document.documentElement.clientWidth > 750) {
     if (window.scrollY >= 2552) {
       brushAnim5.style.width = "109px";
     }
+    if (window.scrollY >= 2552) {
+      project5.style.transform = "translateX(0px)";
+      project5.style.opacity = "1";
+    }
 
-    if (window.scrollY >= 2856) {
+    if (window.scrollY >= 3200) {
       project4.style.transform = "translateX(0px)";
       project4.style.opacity = "1";
     }
 
-    if (window.scrollY >= 3370) {
+    if (window.scrollY >= 3670) {
       project3.style.transform = "translateX(0px)";
       project3.style.opacity = "1";
     }
 
-    if (window.scrollY >= 3833) {
+    if (window.scrollY >= 4133) {
       project2.style.transform = "translateX(0px)";
       project2.style.opacity = "1";
     }
 
-    if (window.scrollY >= 4344) {
+    if (window.scrollY >= 4644) {
       project1.style.transform = "translateX(0px)";
       project1.style.opacity = "1";
     }
 
-    if (window.scrollY >= 4800) {
+    if (window.scrollY >= 5100) {
       brushAnim6.style.width = "197px";
     }
 
-    if (window.scrollY >= 5004) {
+    if (window.scrollY >= 5604) {
       contactP.style.opacity = "1";
     }
 
-    if (window.scrollY >= 5208) {
-      contactForm.style.opacity = "1";
+    if (window.scrollY >= 6108) {
+      emailRedirect.style.opacity = "1";
     }
 
-    if (window.scrollY >= 5508) {
+    if (window.scrollY >= 5608) {
       footer.style.opacity = "1";
     }
   });
@@ -145,8 +150,6 @@ if (document.documentElement.clientWidth > 750) {
 
   aboutText.style.opacity = "1";
 
-  routesImg.style.opacity = "1";
-
   brushAnim4.style.width = "108px";
 
   skillsWebDev.style.opacity = "1";
@@ -154,9 +157,11 @@ if (document.documentElement.clientWidth > 750) {
   skillsGrowth.style.opacity = "1";
 
   skillsEditing.style.opacity = "1";
+  socialCards.style.opacity = "1";
 
   brushAnim5.style.width = "109px";
-
+  project5.style.transform = "translateX(0px)";
+  project5.style.opacity = "1";
   project4.style.transform = "translateX(0px)";
   project4.style.opacity = "1";
 
@@ -173,7 +178,7 @@ if (document.documentElement.clientWidth > 750) {
 
   contactP.style.opacity = "1";
 
-  contactForm.style.opacity = "1";
+  emailRedirect.style.opacity = "1";
 
   footer.style.opacity = "1";
 }
