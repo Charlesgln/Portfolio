@@ -61,11 +61,11 @@ window.addEventListener("load", () => {
     animationName.style.height = "183px";
   }, 500);
   setTimeout(() => {
-    brushAnim1.style.width = "100px";
+    brushAnim1.style.width = "70px";
   }, 400);
 
   setTimeout(() => {
-    brushAnim2.style.width = "130px";
+    brushAnim2.style.width = "90px";
   }, 400);
 });
 
@@ -130,7 +130,7 @@ if (document.documentElement.clientWidth > 750) {
     }
 
     if (window.scrollY >= 5100) {
-      brushAnim6.style.width = "197px";
+      brushAnim6.style.width = "140px";
     }
 
     if (window.scrollY >= 5604) {

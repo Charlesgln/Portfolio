@@ -409,6 +409,7 @@ button {
   border: 0;
   cursor: pointer;
   transition: all 0.7s ease-in;
+  gap: 10px;
 }
 
 .mobile-navbar-background {
@@ -924,24 +925,24 @@ h2 {
 }
 
 #anim-1 {
-  bottom: -8px;
-  left: 7px;
+  bottom: -4px;
+  left: 4px;
   background-image: url("./assets/Vector.png");
   width: 0px;
   height: 9px;
 }
 
 #anim-2 {
-  bottom: -8px;
-  left: 8px;
+  bottom: -4px;
+  left: 30px;
   background-image: url("./assets/Vector2.png");
   width: 0px;
   height: 7px;
 }
 
 #anim-3 {
-  bottom: -12px;
-  left: 42px;
+  bottom: -15px;
+  left: 13px;
   background-image: url("./assets/Vector2.png");
   width: 0px;
   height: 5px;
@@ -967,8 +968,8 @@ h2 {
 }
 
 #anim-6 {
-  bottom: -8px;
-  left: 12px;
+  bottom: -10px;
+  left: 42px;
   background-image: url("./assets/Vector2.png");
   width: 0px;
   height: 9px;
