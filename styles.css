@@ -1102,7 +1102,7 @@ h4 {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin-top: 100px;
+  margin-top: 130px;
   opacity: 0;
   transition: all 0.4s ease-in-out;
 }
@@ -1295,7 +1295,7 @@ h4 {
 }
 
 .logos3 {
-  background: url("./assets/Stack3.png");
+  background: url("./assets/Stack6.png");
   width: 170px;
   height: 37px;
   background-size: contain;
@@ -1570,7 +1570,8 @@ h4 {
     display: none;
   }
   #l7 {
-    display: none;
+    top: 97%;
+    left: -30%;
   }
   #l8 {
     display: none;
@@ -1666,12 +1667,14 @@ h4 {
   }
 
   .brush {
-    display: none;
+    display: block;
+    width: 90px !important;
+    margin-left: -10px !important;
   }
 
   .anim-name {
     width: 8px;
-    height: 80px !important;
+    height: 90px !important;
   }
 
   .name-span {
@@ -1682,7 +1685,18 @@ h4 {
   .brush-anim-2 {
     display: none;
   }
-
+  #anim-1 {
+    width: 70px !important;
+    bottom: -7px;
+    left: 10px;
+  }
+  #anim-3 {
+    left: 45px;
+  }
+  #anim-6 {
+    bottom: -11px;
+    left: 79px;
+  }
   .wrapper {
     position: relative;
     overflow-x: hidden;
@@ -1763,6 +1777,8 @@ h4 {
   h2 {
     margin: 119px 40px 0px 40px;
     font-size: 17px;
+
+    line-height: 1.5;
   }
 
   h4 {
@@ -1866,13 +1882,17 @@ h4 {
   }
 
   #l1 {
-    top: -3%;
+    top: 17%;
     left: 11%;
+  }
+  #l2 {
+    top: 1%;
+    right: -32%;
   }
 
   #l3 {
-    top: 38%;
-    right: -128%;
+    top: 32%;
+    right: 8%;
   }
 
   #l4 {
@@ -1889,7 +1909,8 @@ h4 {
     display: none;
   }
   #l7 {
-    display: none;
+    top: 97%;
+    left: -30%;
   }
   #l8 {
     display: none;
@@ -1917,7 +1938,7 @@ h4 {
 
   .click_here {
     bottom: -245px;
-    right: 85px;
+    right: 60px;
   }
   .info-contact {
     display: flex;
