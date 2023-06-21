@@ -539,7 +539,7 @@ h1 {
   background: -moz-linear-gradient(
     top,
     rgba(212, 183, 33, 0.4) 1.9%,
-    rgba(84, 50, 184, 0.4) 37.15%,
+    rgba(212, 33, 140, 0.4) 37.15%,
     rgba(54, 72, 169, 0.4) 100.9%
   );
   background: -webkit-gradient(
@@ -547,31 +547,31 @@ h1 {
     left top,
     left bottom,
     color-stop(1.9%, rgba(212, 183, 33, 0.4)),
-    color-stop(37.15%, rgba(84, 50, 184, 0.4)),
+    color-stop(37.15%, rgba(212, 33, 140, 0.4)),
     color-stop(100.9%, rgba(54, 72, 169, 0.4))
   );
   background: -webkit-linear-gradient(
     top,
     rgba(212, 183, 33, 0.4) 1.9%,
-    rgba(84, 50, 184, 0.4) 37.15%,
+    rgba(212, 33, 140, 0.4) 37.15%,
     rgba(54, 72, 169, 0.4) 100.9%
   );
   background: -o-linear-gradient(
     top,
     rgba(212, 183, 33, 0.4) 1.9%,
-    rgba(84, 50, 184, 0.4) 37.15%,
+    rgba(212, 33, 140, 0.4) 37.15%,
     rgba(54, 72, 169, 0.4) 100.9%
   );
   background: -ms-linear-gradient(
     top,
     rgba(212, 183, 33, 0.4) 1.9%,
-    rgba(84, 50, 184, 0.4) 37.15%,
+    rgba(212, 33, 140, 0.4) 37.15%,
     rgba(54, 72, 169, 0.4) 100.9%
   );
   background: linear-gradient(
     to bottom,
     rgba(212, 183, 33, 0.4) 1.9%,
-    rgba(84, 50, 184, 0.4) 37.15%,
+    rgba(212, 33, 140, 0.4) 37.15%,
     rgba(54, 72, 169, 0.4) 100.9%
   );
 }
@@ -940,8 +940,8 @@ h2 {
 }
 
 #anim-3 {
-  bottom: -15px;
-  left: 13px;
+  bottom: -12px;
+  left: 42px;
   background-image: url("./assets/Vector2.png");
   width: 0px;
   height: 5px;
@@ -958,7 +958,7 @@ h2 {
 }
 
 #anim-5 {
-  bottom: -15px;
+  bottom: -12px;
   left: 24px;
   background-image: url("./assets/Vector2.png");
   width: 0px;
@@ -967,7 +967,7 @@ h2 {
 }
 
 #anim-6 {
-  bottom: -18px;
+  bottom: -8px;
   left: 12px;
   background-image: url("./assets/Vector2.png");
   width: 0px;
@@ -1522,7 +1522,7 @@ h4 {
 }
 
 .click_here {
-  background: url(/assets/click_here.png);
+  background: url(./assets/click_here.png);
   width: 80px;
   height: 100px;
   background-repeat: no-repeat;
@@ -1674,7 +1674,7 @@ h4 {
 
   .anim-name {
     width: 8px;
-    height: 90px !important;
+    height: 80px !important;
   }
 
   .name-span {
@@ -1686,9 +1686,14 @@ h4 {
     display: none;
   }
   #anim-1 {
-    width: 70px !important;
-    bottom: -7px;
+    width: 47px !important;
+    bottom: -5px;
     left: 10px;
+  }
+  #anim-2 {
+    width: 62px !important;
+    bottom: -4px;
+    left: 28px;
   }
   #anim-3 {
     left: 45px;
