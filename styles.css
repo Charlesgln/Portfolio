@@ -1276,7 +1276,7 @@ h4 {
 }
 
 .logos2 {
-  background: url("./assets/Stack2.png");
+  background: url("./assets/Stack1.png");
   width: 206px;
   height: 32px;
   background-size: contain;
@@ -1691,9 +1691,9 @@ h4 {
     left: 10px;
   }
   #anim-2 {
-    width: 62px !important;
-    bottom: -4px;
-    left: 28px;
+    width: 47px !important;
+    bottom: -5px;
+    left: 36px;
   }
   #anim-3 {
     left: 45px;
