@@ -368,7 +368,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   font-family: "Manrope", sans-serif;
-  opacity: 0;
+  opacity: 1;
   transition: all 1s ease-in-out;
   padding: 20px 10px 0px 10px;
 }
@@ -440,6 +440,10 @@ h1 {
   letter-spacing: -0.035em;
   margin: 0;
   font-weight: 500;
+}
+
+#logo_kg_mobile {
+  display: none;
 }
 
 .anim-name {
@@ -925,8 +929,8 @@ h2 {
 }
 
 #anim-1 {
-  bottom: -4px;
-  left: 4px;
+  bottom: -9px;
+  left: 26px;
   background-image: url("./assets/Vector.png");
   width: 0px;
   height: 9px;
@@ -1190,6 +1194,7 @@ h4 {
   justify-content: space-between;
   gap: 80px;
   position: relative;
+  align-items: center;
 }
 
 .redirect-button img {
@@ -1226,7 +1231,7 @@ h4 {
 
 .context-card p {
   text-align: left;
-  font-size: 19px;
+  font-size: 16px;
   padding: 10px 0px 20px;
   margin: 0;
 }
@@ -1276,10 +1281,19 @@ h4 {
   background-repeat: no-repeat;
 }
 
+.logos1 {
+  background: url("./assets/Stack9.png");
+  width: 120px;
+  height: 37px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .logos2 {
   background: url("./assets/Stack2.png");
   width: 206px;
-  height: 32px;
+  height: 37px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1297,8 +1311,8 @@ h4 {
 
 .logos3 {
   background: url("./assets/Stack6.png");
-  width: 170px;
-  height: 37px;
+  width: 198px;
+  height: 36px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1622,7 +1636,18 @@ h4 {
   .information-card img {
     display: none;
   }
-
+  nav > ul {
+    position: absolute;
+    z-index: 13;
+    color: #7d0708;
+    bottom: 270px;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    font-size: 20px;
+    opacity: 1;
+  }
   #column-reverse-mobile {
     flex-direction: column-reverse;
   }
@@ -1663,21 +1688,131 @@ h4 {
   display: none;
 }
 @media (max-width: 750px) {
+  .hamburger-menu {
+    width: 40px;
+    height: 14px;
+    position: relative;
+    cursor: pointer;
+    z-index: 4;
+    right: -37px;
+    top: 45px;
+  }
+  .fadeIn {
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 100ms;
+  }
+  .logo-social {
+    width: 73px;
+  }
+  .fadeOut {
+    animation: fadeOut 0.3s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .header-menu {
+    margin: 255px 0px 0px 0px;
+  }
+
+  .bar {
+    width: 90%;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    transition: transform 0.3s, top 0.3s, bottom 0.3s;
+  }
+
+  .hamburger-menu .bar:nth-child(1) {
+    top: 0;
+  }
+
+  .hamburger-menu .bar:nth-child(2) {
+    bottom: 0;
+  }
+  .hamburger-menu.cross .bar:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%;
+    transform-origin: center;
+    margin-top: -0px;
+  }
+  .modal-open,
+  .modal-hide {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background: rgba(51, 35, 65, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+  }
+  nav > li {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    font-size: 17px !important;
+  }
+  .modal-open {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .modal-hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+
+  .hamburger-menu.cross .bar:nth-child(2) {
+    transform: rotate(-45deg);
+    bottom: 50%;
+    transform-origin: center;
+    margin-bottom: -2px;
+  }
   body {
     padding: 0px;
   }
 
   .brush {
     display: block;
-    width: 90px !important;
+    width: 90px;
     margin-left: -10px !important;
   }
 
   .anim-name {
     width: 8px;
-    height: 80px !important;
+    height: 43px;
   }
-
+  #logo_kg_mobile {
+    display: block;
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    right: 31px;
+  }
   .name-span {
     margin-left: 11px;
   }
@@ -1687,10 +1822,11 @@ h4 {
     display: none;
   }
   #anim-1 {
-    width: 47px !important;
-    bottom: -5px;
-    left: 10px;
+    width: 0px;
+    bottom: -8px;
+    left: 33px;
   }
+
   #anim-2 {
     width: 47px !important;
     bottom: -5px;
@@ -1699,6 +1835,7 @@ h4 {
   #anim-3 {
     left: 45px;
   }
+
   #anim-6 {
     bottom: -11px;
     left: 79px;
@@ -1706,9 +1843,6 @@ h4 {
   .wrapper {
     position: relative;
     overflow-x: hidden;
-  }
-  header {
-    visibility: hidden;
   }
 
   nav {
@@ -1820,10 +1954,6 @@ h4 {
 
   .name-span {
     font-size: 61px;
-  }
-
-  .icon {
-    display: none;
   }
 
   #works {

@@ -17,25 +17,28 @@
     <div class="wrapper">
       <div class="background-light"></div>
       <header>
-        <nav>
-          <div class="logo">/gloaguen/kiliann</div>
-          <ul>
-            <li><a href="#about-me">À propos</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#works">Projets</a></li>
-            <a href="#contact">
-              <button>
-                Contact
-                <img
-                  src="./assets/arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"
-                  alt="flèche"
-                />
-              </button>
-            </a>
-          </ul>
-        </nav>
+        <section class="modal-hide">
+          <nav>
+            <ul class="nav-animation">
+              <li><a href="#histoire">Notre histoire</a></li>
+              <li><a href="#confiance">Ils nous font confiance</a></li>
+              <li><a href="#equipements">Notre équipements</a></li>
+              <li><a href="#prestations">Prestations</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <div class="hamburger-menu" onclick="toggleHamburger()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
       </header>
       <section class="header-menu">
+        <img
+          id="logo_kg_mobile"
+          src="/assets/logo_kg_mobile.svg"
+          alt="Logo kg"
+        />
         <div class="name">
           <h1>
             kiliann
@@ -44,17 +47,13 @@
           <div class="name-span">g oaguen</div>
         </div>
         <h2>
-          Développeur front-end
+          Développeur web
           <span class="bold"
             >React
             <div class="brush" id="anim-1"></div>
           </span>
-          et
-          <span class="bold2"
-            >Influenceur
-            <div class="brush" id="anim-2"></div>
-          </span>
-          Amazon
+
+          <span class="bold2"> / NodeJs </span>
         </h2>
         <div class="icons">
           <div class="icon" id="icon-terminal"></div>
@@ -85,33 +84,29 @@
         <div class="about-text">
           <p>
             Je m'appelle <span class="bold">Kiliann</span>, j'ai 22 ans et je
-            suis un <span class="bold">développeur web</span> et
-            <span class="bold">influenceur</span> Amazon.
+            suis <span class="bold">développeur web</span> et
+            <span class="bold">créateur de contenu.</span>
           </p>
           <p>
             Passionné par la technologie depuis l'âge de 10 ans, j'aime
-            développer de nouvelles compétences pour imaginer et concevoir mes
-            <span class="bold">idées</span> comme je le souhaite afin
-            d'atteindre mes objectifs.
+            développer de nouvelles compétences pour pouvoir imaginer et
+            concevoir mes
+            <span class="bold">idées</span> comme je le souhaite.
           </p>
-          <p>
-            J'ai commencé à coder en autodidacte par curiosité, puis j'ai suivi
-            une <span class="bold">formation en ligne</span> pour améliorer mes
-            compétences en programmation.
-          </p>
+
           <p>
             Aujourd'hui, je crée des <span class="bold">sites web</span> et des
-            <span class="bold">SaaS</span> pour mon entreprise et je cherche
-            constamment à <span class="bold">améliorer mon code.</span>.
+            <span class="bold">applications web</span> pour mes clients et mo et
+            je cherche constamment à améliorer mes compétences.
           </p>
           <p>
             En ce qui concerne mes réseaux sociaux, j'ai commencé en septembre
             2022 en présentant des vidéos de produits quotidiens pour aider
             <span class="bold">ma communauté</span> ! Aujourd'hui, j'ai
             <span class="bold">généré</span> plus de
-            <span class="bold">90 000 €</span> pour mes collaborateurs et j'ai
-            accumulé plus de <span class="bold">13 millions de vues</span> sur
-            mes réseaux sociaux.
+            <span class="bold">100 000 €</span> à mes collaborateurs et accumulé
+            plus de <span class="bold">13 millions de vues</span> sur mes
+            réseaux sociaux.
           </p>
         </div>
         <div class="social-cards">
@@ -122,7 +117,7 @@
               alt="Logo de Tiktok"
             />
             <div class="social-name">@charlesgln</div>
-            <div class="followers">198k followers</div>
+            <div class="followers">208k followers</div>
             <a
               href="https://www.tiktok.com/@charlesgln"
               target="_blank"
@@ -136,7 +131,7 @@
               alt="Logo de facebook"
             />
             <div class="social-name">@LesPépites</div>
-            <div class="followers">110k followers</div>
+            <div class="followers">130k followers</div>
             <a
               href="https://www.facebook.com/profile.php?id=100087399402749"
               target="_blank"
@@ -150,7 +145,7 @@
               alt="Logo de instagram"
             />
             <div class="social-name">@charlesgln__</div>
-            <div class="followers">1130 followers</div>
+            <div class="followers">1330 followers</div>
             <a
               href="https://www.instagram.com/charlesgln__/"
               target="_blank"
@@ -164,7 +159,7 @@
               alt="Logo de youtube"
             />
             <div class="social-name">@lespepites461</div>
-            <div class="followers">582 followers</div>
+            <div class="followers">602 followers</div>
             <a
               href="https://youtube.com/@lespepites461"
               target="_blank"
@@ -200,9 +195,18 @@
               <div class="context-card">
                 <h6>Charlize</h6>
                 <p>
-                  Charlize est une application web qui compare les produits dans
-                  tous les magasins Amazon en Europe, c'est un bon moyen
-                  d'économiser de l'argent lors de vos achats.
+                  Responsable de la conception à la mise en production, j'ai
+                  créé Charlize, une application web qui compare les prix des
+                  produits Amazon à travers toute l'Europe. En utilisant une
+                  combinaison d'AWS Lambda et API Gateway, j'ai développé une
+                  solution back-end sans serveur en environnement Node.js. Sur
+                  le plan du front-end, j'ai élaboré une expérience utilisateur
+                  intuitive et réactive grâce à React Js. Mon implication
+                  intégrale dans le processus, du web design au développement,
+                  témoigne de ma capacité à gérer des projets complexes de bout
+                  en bout. De plus, j'ai activement créé et géré du contenu
+                  promotionnel sur les réseaux sociaux qui a généré au total
+                  plus de 2 millions de vues.
                 </p>
               </div>
               <div class="stack-card">
@@ -264,7 +268,7 @@
               </div>
               <div class="stack-card">
                 <h6>Technologies utilisées</h6>
-                <div class="logos3"></div>
+                <div class="logos1"></div>
               </div>
             </div>
             <div class="kaza-card"></div>
