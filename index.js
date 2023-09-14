@@ -52,12 +52,12 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       iconFolder.style.transform = "translate(160px, -160px)";
       iconBracket.style.transform = "translate(-120px, -160px)";
-    }, 410);
+    }, 710);
 
     setTimeout(() => {
       iconObject.style.transform = "translate(-170px, -100px)";
       iconSocial.style.transform = "translate(220px, -120px)";
-    }, 420);
+    }, 720);
 
     setTimeout(() => {
       animationName.style.height = "183px";
@@ -68,28 +68,28 @@ window.addEventListener("load", () => {
   } else {
     setTimeout(() => {
       animationName.style.height = "81px";
-    }, 500);
+    }, 100);
     setTimeout(() => {
       brushAnim1.style.width = "70px";
-    }, 400);
+    }, 800);
 
     setTimeout(() => {
       iconTerminal.style.transform = "translate(-95px, -20px)";
-      iconCamera.style.transform = "translate(35px, -55px)";
+      iconCamera.style.transform = "translate(35px, -35px)";
       icon.forEach((icon) => {
         icon.style.opacity = "0.3";
       });
-    }, 400);
+    }, 500);
 
     setTimeout(() => {
-      iconFolder.style.transform = "translate(60px, -270px)";
-      iconBracket.style.transform = "translate(-100px, -250px)";
-    }, 410);
+      iconFolder.style.transform = "translate(60px, -200px)";
+      iconBracket.style.transform = "translate(-100px, -220px)";
+    }, 510);
 
     setTimeout(() => {
-      iconObject.style.transform = "translate(-100px, -80px)";
-      iconSocial.style.transform = "translate(95px, -138px)";
-    }, 420);
+      iconObject.style.transform = "translate(-118px, -38px)";
+      iconSocial.style.transform = "translate(116px, -85px)";
+    }, 520);
   }
 });
 
@@ -219,32 +219,57 @@ const handleMove = (event) => {
   }
 
   // -------- RIGHT-ICON ------------
+  if (event.type === "touchmove") {
+    iconFolder.style.transform = `translate(${
+      140 * mouseXmultiplicatorR * scaleFactor
+    }px, ${-400 * -mouseYmultiplicatorR * scaleFactor}px)`;
+    iconSocial.style.transform = `translate(${
+      220 * mouseXmultiplicatorR * scaleFactor
+    }px, ${-200 * -mouseYmultiplicatorR * scaleFactor}px)`;
+    iconCamera.style.transform = `translate(${
+      80 * mouseXmultiplicatorR * scaleFactor
+    }px, ${-100 * -mouseYmultiplicatorR * scaleFactor}px)`;
 
-  iconFolder.style.transform = `translate(${
-    160 * mouseXmultiplicatorR * scaleFactor
-  }px, ${-460 * -mouseYmultiplicatorR * scaleFactor}px)`;
-  iconSocial.style.transform = `translate(${
-    180 * mouseXmultiplicatorR * scaleFactor
-  }px, ${-230 * -mouseYmultiplicatorR * scaleFactor}px)`;
-  iconCamera.style.transform = `translate(${
-    80 * mouseXmultiplicatorR * scaleFactor
-  }px, ${-120 * -mouseYmultiplicatorR * scaleFactor}px)`;
+    // -----------LEFT-ICON -----------------
 
-  // -----------LEFT-ICON -----------------
+    iconBracket.style.transform = `translate(${
+      -180 * -mouseXmultiplicatorL * scaleFactor
+    }px, ${-400 * -mouseYmultiplicatorL * scaleFactor}px)`;
+    iconObject.style.transform = `translate(${
+      -230 * -mouseXmultiplicatorL * scaleFactor
+    }px, ${-120 * -mouseYmultiplicatorL * scaleFactor}px)`;
+    iconTerminal.style.transform = `translate(${
+      -180 * -mouseXmultiplicatorL * scaleFactor
+    }px, ${-60 * -mouseYmultiplicatorL * scaleFactor}px)`;
+  } else {
+    iconFolder.style.transform = `translate(${160 * mouseXmultiplicatorR}px, ${
+      -160 * -mouseYmultiplicatorR
+    }px)`;
+    iconSocial.style.transform = `translate(${220 * mouseXmultiplicatorR}px, ${
+      -120 * -mouseYmultiplicatorR
+    }px)`;
+    iconCamera.style.transform = `translate(${200 * mouseXmultiplicatorR}px, ${
+      -60 * -mouseYmultiplicatorR
+    }px)`;
 
-  iconBracket.style.transform = `translate(${
-    -160 * -mouseXmultiplicatorL * scaleFactor
-  }px, ${-420 * -mouseYmultiplicatorL * scaleFactor}px)`;
-  iconObject.style.transform = `translate(${
-    -170 * -mouseXmultiplicatorL * scaleFactor
-  }px, ${-140 * -mouseYmultiplicatorL * scaleFactor}px)`;
-  iconTerminal.style.transform = `translate(${
-    -180 * -mouseXmultiplicatorL * scaleFactor
-  }px, ${-60 * -mouseYmultiplicatorL * scaleFactor}px)`;
+    // -----------LEFT-ICON -----------------
+
+    iconBracket.style.transform = `translate(${
+      -120 * -mouseXmultiplicatorL
+    }px, ${-160 * -mouseYmultiplicatorL}px)`;
+    iconObject.style.transform = `translate(${
+      -170 * -mouseXmultiplicatorL
+    }px, ${-100 * -mouseYmultiplicatorL}px)`;
+    iconTerminal.style.transform = `translate(${
+      -200 * -mouseXmultiplicatorL
+    }px, ${-60 * -mouseYmultiplicatorL}px)`;
+  }
 };
-
-document.addEventListener("mousemove", handleMove);
-document.addEventListener("touchmove", handleMove);
+if (document.documentElement.clientWidth > 750) {
+  document.addEventListener("mousemove", handleMove);
+} else {
+  document.addEventListener("touchmove", handleMove);
+}
 
 function toggleHamburger() {
   var menu = document.querySelector(".hamburger-menu");
