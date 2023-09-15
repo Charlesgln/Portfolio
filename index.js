@@ -1,5 +1,4 @@
 const animationName = document.querySelector(".anim-name");
-const navbar = document.querySelector("nav");
 const brushAnim1 = document.getElementById("anim-1");
 const brushAnim3 = document.getElementById("anim-3");
 const brushAnim4 = document.getElementById("anim-4");
@@ -27,12 +26,15 @@ const project2 = document.querySelector(".project-2");
 const project3 = document.querySelector(".project-3");
 const project4 = document.querySelector(".project-4");
 const project5 = document.querySelector(".project-5");
+const project6 = document.querySelector(".project-6");
 const contactP = document.getElementById("contact-p");
 const emailRedirect = document.querySelector(".email");
 const footer = document.getElementById("footer");
 const modal = document.querySelector(".modal-hide");
 const nav = document.querySelector(".nav-animation");
-
+const h2 = document.querySelector("h2");
+const wrapper = document.querySelector(".wrapper");
+console.log(header);
 // ---------------- ANIMATION ON LOAD ---------------
 
 window.addEventListener("load", () => {
@@ -46,7 +48,7 @@ window.addEventListener("load", () => {
     }, 400);
 
     setTimeout(() => {
-      navbar.style.opacity = "1";
+      header.style.opacity = "1";
     }, 600);
 
     setTimeout(() => {
@@ -66,6 +68,9 @@ window.addEventListener("load", () => {
       brushAnim1.style.width = "134px";
     }, 400);
   } else {
+    setTimeout(() => {
+      header.style.opacity = "1";
+    }, 700);
     setTimeout(() => {
       animationName.style.height = "81px";
     }, 100);
@@ -124,9 +129,14 @@ window.addEventListener("scroll", function () {
     skillsEditing.style.opacity = "1";
   }
 
-  if (window.scrollY >= 2552) {
+  if (window.scrollY >= 2352) {
     brushAnim5.style.width = "109px";
   }
+  if (window.scrollY >= 2452) {
+    project6.style.transform = "translateX(0px)";
+    project6.style.opacity = "1";
+  }
+
   if (window.scrollY >= 2552) {
     project5.style.transform = "translateX(0px)";
     project5.style.opacity = "1";
@@ -175,10 +185,9 @@ const handleMove = (event) => {
   if (event.type === "mousemove") {
     mouseX = event.clientX;
     mouseY = event.clientY;
-  } else if (event.type === "touchmove") {
+  } else if (event.type === "scroll") {
     event.preventDefault();
-    mouseX = event.touches[0].clientX;
-    mouseY = event.touches[0].clientY;
+    mouseY = window.scrollY;
   }
 
   let scaleFactor;
@@ -219,28 +228,28 @@ const handleMove = (event) => {
   }
 
   // -------- RIGHT-ICON ------------
-  if (event.type === "touchmove") {
-    iconFolder.style.transform = `translate(${
-      140 * mouseXmultiplicatorR * scaleFactor
-    }px, ${-400 * -mouseYmultiplicatorR * scaleFactor}px)`;
-    iconSocial.style.transform = `translate(${
-      220 * mouseXmultiplicatorR * scaleFactor
-    }px, ${-200 * -mouseYmultiplicatorR * scaleFactor}px)`;
-    iconCamera.style.transform = `translate(${
-      80 * mouseXmultiplicatorR * scaleFactor
-    }px, ${-100 * -mouseYmultiplicatorR * scaleFactor}px)`;
+  if (event.type === "scroll") {
+    iconFolder.style.transform = `translate(62px, ${
+      -267 * -mouseYmultiplicatorR * scaleFactor
+    }px)`;
+    iconSocial.style.transform = `translate(116px, ${
+      -123 * -mouseYmultiplicatorR * scaleFactor
+    }px)`;
+    iconCamera.style.transform = `translate(35px, ${
+      -50 * -mouseYmultiplicatorR * scaleFactor
+    }px)`;
 
     // -----------LEFT-ICON -----------------
 
-    iconBracket.style.transform = `translate(${
-      -180 * -mouseXmultiplicatorL * scaleFactor
-    }px, ${-400 * -mouseYmultiplicatorL * scaleFactor}px)`;
-    iconObject.style.transform = `translate(${
-      -230 * -mouseXmultiplicatorL * scaleFactor
-    }px, ${-120 * -mouseYmultiplicatorL * scaleFactor}px)`;
-    iconTerminal.style.transform = `translate(${
-      -180 * -mouseXmultiplicatorL * scaleFactor
-    }px, ${-60 * -mouseYmultiplicatorL * scaleFactor}px)`;
+    iconBracket.style.transform = `translate(-100px, ${
+      -287 * -mouseYmultiplicatorR * scaleFactor
+    }px)`;
+    iconObject.style.transform = `translate(-118px, ${
+      -43 * -mouseYmultiplicatorR * scaleFactor
+    }px)`;
+    iconTerminal.style.transform = `translate(-95px, ${
+      -20 * -mouseYmultiplicatorR * scaleFactor
+    }px)`;
   } else {
     iconFolder.style.transform = `translate(${160 * mouseXmultiplicatorR}px, ${
       -160 * -mouseYmultiplicatorR
@@ -268,12 +277,13 @@ const handleMove = (event) => {
 if (document.documentElement.clientWidth > 750) {
   document.addEventListener("mousemove", handleMove);
 } else {
-  document.addEventListener("touchmove", handleMove);
+  document.addEventListener("scroll", handleMove);
 }
 
 function toggleHamburger() {
   var menu = document.querySelector(".hamburger-menu");
   menu.classList.toggle("cross");
+  nav.removeAttribute("data-aos");
   if (modal.classList.contains("modal-hide")) {
     modal.classList.remove("modal-hide");
     nav.classList.remove("fadeOut");
@@ -288,3 +298,10 @@ function toggleHamburger() {
     document.body.style.overflow = "auto";
   }
 }
+
+links.forEach((li) => {
+  li.addEventListener("click", () => {
+    toggleHamburger();
+    document.body.style.overflow = "hidden auto";
+  });
+});
