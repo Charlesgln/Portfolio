@@ -358,7 +358,7 @@ html {
 }
 body {
   padding: 20px 60px 0px 60px;
-  background-color: rgba(13, 25, 39, 1);
+  background-color: rgb(12, 22, 34);
   color: aliceblue;
   overflow-x: hidden;
   position: relative;
@@ -1635,6 +1635,11 @@ header {
     width: 300px;
     height: 197px;
   }
+  .ramosdeco-card {
+    width: 457px;
+    height: 217px;
+  }
+
   .stack-card {
     display: flex;
     flex-direction: column;
@@ -1837,7 +1842,7 @@ header {
   #anim-1 {
     width: 0px;
     bottom: -8px;
-    left: 33px;
+    left: 35px;
   }
 
   #anim-2 {
@@ -1846,7 +1851,11 @@ header {
     left: 36px;
   }
   #anim-3 {
-    left: 45px;
+    left: 34px;
+    bottom: -13px;
+  }
+  #anim-5 {
+    left: 21px !important;
   }
 
   #anim-6 {
@@ -2030,9 +2039,9 @@ header {
   }
 
   #l1 {
-    top: 1%;
+    top: 4%;
     left: 53%;
-    transform: rotate(39deg);
+    transform: rotate(-185deg);
   }
   #l2 {
     top: 4%;

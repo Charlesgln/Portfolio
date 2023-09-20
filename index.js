@@ -305,3 +305,24 @@ links.forEach((li) => {
     document.body.style.overflow = "hidden auto";
   });
 });
+
+// Sélectionnez tous les liens à l'intérieur de .nav-animation
+let linksRedirect = document.querySelectorAll(".nav-animation a");
+
+linksRedirect.forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    // Récupérez l'ID de l'ancre à partir de l'attribut href du lien
+    var anchorId = link.getAttribute("href").slice(1); // retire le caractère '#'
+
+    // Trouvez la position de l'élément cible
+    var elementPosition = document.getElementById(anchorId).offsetTop;
+
+    // Appliquez un décalage si nécessaire (par exemple, 50 pixels ici)
+    var desiredScrollPosition = elementPosition - 50;
+
+    // Faites défiler la page jusqu'à la position désirée
+    window.scrollTo(0, desiredScrollPosition);
+  });
+});
