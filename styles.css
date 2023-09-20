@@ -1654,13 +1654,14 @@ header {
     position: absolute;
     z-index: 13;
     color: #7d0708;
-    bottom: 311px;
+    bottom: inherit;
     flex-direction: column;
     align-items: center;
     left: 50%;
     transform: translate(-50%, -50%) !important;
     font-size: 25px;
     opacity: 1;
+    margin-top: 319px;
   }
   #column-reverse-mobile {
     flex-direction: column-reverse;
