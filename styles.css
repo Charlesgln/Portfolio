@@ -1301,6 +1301,15 @@ h4 {
   background-repeat: no-repeat;
 }
 
+.logos10 {
+  background: url("./assets/stack10.png");
+  width: 144px;
+  height: 37px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .kaza-card {
   position: relative;
   background-image: url("./assets/Kaza.png");
